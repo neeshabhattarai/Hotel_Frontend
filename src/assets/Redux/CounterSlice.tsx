@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import React from "react";
+import React, { act } from "react";
 type Counter = {
   count: number;
 };

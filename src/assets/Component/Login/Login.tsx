@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Header from "../Header";
 import { useForm } from "react-hook-form";
 
-function Signup() {
+function Login() {
   const [open, setOpen] = useState(false);
   const {
     register,
@@ -21,11 +21,11 @@ function Signup() {
         onClick={() => setOpen((c) => (c = true))}
         className="!bg-amber-600 !text-[15px] !m-0 hover:outline-2 outline-green-200 !pt-1.5 !pb-1.5 !  "
       >
-        Sign Up
+        Login
       </button>
 
       {open && (
-        <div className="fixed flex top-0 left-0 h-screen bg-transparent w-screen backdrop-blur-md justify-center items-center ">
+        <div className="fixed flex top-0 left-0 h-lvh bg-transparent w-screen backdrop-blur-md justify-center items-center ">
           <div
             className="w-[25rem] bg-white shadow-2xs flex flex-col rounded-xl gap-0  "
             style={{
@@ -47,7 +47,7 @@ function Signup() {
               }}
             >
               <div className="text-3xl text-shadow-neutral-900 font-[500] font-serif ">
-                Sign up
+                Login
               </div>
 
               <div className="flex gap-4    justify-center">
@@ -66,37 +66,7 @@ function Signup() {
                   {errors.name?.message}
                 </div>
               )}
-              <div className="flex gap-4   justify-center">
-                <label className="w-25 text-left justify-self-start">
-                  Contact
-                </label>
-                <input
-                  className="rounded-xl outline-none outline-green-800 border-2 border-gray-400 "
-                  {...register("contact", {
-                    required: "Contact canot be null",
-                    minLength: { value: 10, message: "It should be 10" },
-                  })}
-                />
-              </div>
-              {errors.contact && (
-                <div className="text-red-900 text-[1rem]">
-                  {errors.contact?.message}
-                </div>
-              )}
-              <div className="flex gap-4   justify-center">
-                <label className="w-25 text-left">Address</label>
-                <input
-                  className="rounded-xl outline-none outline-green-800 border-2 border-gray-400 "
-                  {...register("address", {
-                    required: "Address canot be null",
-                  })}
-                />
-              </div>
-              {errors.address && (
-                <div className="text-red-900 text-[1rem]">
-                  {errors.address?.message}
-                </div>
-              )}
+
               <div className="flex gap-4   justify-center">
                 <label className="w-25 text-left">National Id</label>
                 <input
@@ -136,4 +106,4 @@ function Signup() {
   );
 }
 
-export default Signup;
+export default Login;

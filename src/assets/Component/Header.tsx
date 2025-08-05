@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { HiMenu } from "react-icons/hi";
 import Signup from "./Signup/Signup";
+import Login from "./Login/Login";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -69,9 +70,10 @@ export default function Header() {
                 <Signup />{" "}
               </div>
               <div className="!text-inherit">
-                <button className="!bg-amber-600 !m-0 !text-[15px] hover:outline-2 outline-green-200 !pt-1.5 !pb-1.5 !hover:text-shadow-neutral-100">
-                  Log in
-                </button>
+                <div className="!text-inherit">
+                  {" "}
+                  <Login />
+                </div>
               </div>
             </li>
           </ul>
@@ -106,9 +108,10 @@ export default function Header() {
               <Signup />
             </div>
             <div className="!text-inherit">
-              <button className="!bg-amber-600 !m-0 !text-[15px] hover:outline-2 outline-green-200 !pt-1.5 !pb-1.5 !hover:text-shadow-neutral-100">
-                Log in
-              </button>
+              <div className="!text-inherit">
+                {" "}
+                <Login />
+              </div>
             </div>
           </li>
         </ul>

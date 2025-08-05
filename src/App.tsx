@@ -11,6 +11,7 @@ import About from "./assets/Component/About/About";
 import Contact from "./assets/Component/Contact";
 import Home from "./assets/Component/Home";
 import Signup from "./assets/Component/Signup/Signup";
+import Counter from "./assets/Redux/Counter";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,6 +25,7 @@ const router = createBrowserRouter([
       { path: "home", element: <Home /> },
       { path: "about", element: <About /> },
       { path: "contact", element: <Contact /> },
+      { path: "counter", element: <Counter /> },
     ],
   },
 ]);
